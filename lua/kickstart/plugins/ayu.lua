@@ -2,7 +2,7 @@ return {
 	{
 		-- Ayu colorscheme
 		"Shatur/neovim-ayu",
-		priority = 1000, -- Ensure it loads before other plugins
+		priority = 10000, -- Ensure it loads before other plugins
 		config = function()
 			-- Optional: Enable true color support
 			vim.opt.termguicolors = true
@@ -11,12 +11,22 @@ return {
 			require("ayu").setup({
 				mirage = false, -- Set to true to use the 'mirage' variant
 				terminal = true, -- Use terminal colors
-				overrides = {}, -- Customize highlight groups if needed
+				overrides = {
+					Normal = { bg = "None" },
+					NormalFloat = { bg = "none" },
+					ColorColumn = { bg = "None" },
+					SignColumn = { bg = "None" },
+					Folded = { bg = "None" },
+					FoldColumn = { bg = "None" },
+					CursorLine = { bg = "None" },
+					CursorColumn = { bg = "None" },
+					VertSplit = { bg = "None" },
+				}, -- Customize highlight groups if needed
 			})
 
 			-- Apply the colorscheme
 			-- vim.cmd.colorscheme("ayu")
-			vim.cmd.colorscheme("ayu-mirage")
+			-- vim.cmd.colorscheme("ayu-mirage")
 		end,
 	},
 }

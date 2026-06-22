@@ -10,6 +10,7 @@ return {
 			-- Optional settings
 			vim.g.edge_style = "aura" -- Options: 'default', 'aura', 'neon'
 			vim.g.edge_enable_italic = 1
+			vim.g.edge_enable_bold = 1
 			vim.g.edge_disable_italic_comment = 0
 			vim.g.edge_transparent_background = 0
 			vim.g.edge_dim_inactive_windows = 0
