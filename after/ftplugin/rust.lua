@@ -26,3 +26,6 @@ map('<leader>rt', 'testables', 'Rust test')
 map('<leader>rf', 'flyCheck', 'Rust fly check')
 map('<leader>rm', 'expandMacro', 'Rust expand macro')
 map('<leader>re', 'explainError', 'Rust explain error')
+
+vim.lsp.semantic_tokens.enable(false, { bufnr = 0 })
+vim.treesitter.start()
